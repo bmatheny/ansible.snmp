@@ -1,6 +1,6 @@
 # {{ ansible_managed }}
 
-createUser {{ snmp_user }} SHA {{ snmp_password }} AES {{ snmp_encryption }}
+createUser {{ snmp_user }} SHA {{ snmp_password }} DES {{ snmp_encryption }}
 
 rouser {{ snmp_user }} priv
 {% if ansible_default_ipv4.address is defined %}
