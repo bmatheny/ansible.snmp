@@ -21,6 +21,9 @@ sysContact {{ snmp_contact }}
 {% for item in snmp_extension_list %}
 extend {{ item.extend }}
 {% endfor %}
+{% for item in snmp_additional_extensions %}
+extend {{ item.extend }}
+{% endfor %}
 {% if "pve" in ansible_kernel %}
 extend proxmox /usr/bin/sudo {{ snmp_extension_scripts }}/proxmox
 {% endif %}

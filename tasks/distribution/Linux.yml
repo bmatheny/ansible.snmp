@@ -40,6 +40,7 @@
     selevel: s0
   with_items:
     - "{{ snmp_extension_list }}"
+    - "{{ snmp_additional_extensions }}"
   tags:
     - configuration
 
