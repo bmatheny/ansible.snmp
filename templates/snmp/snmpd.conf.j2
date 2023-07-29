@@ -18,6 +18,10 @@ sysName {{ ansible_fqdn }}
 sysContact {{ snmp_contact }}
 {% endif %}
 
+{% for line in snmp_extra_lines %}
+{{ line }}
+{% endfor %}
+
 {% for item in snmp_extension_list %}
 extend {{ item.extend }}
 {% endfor %}

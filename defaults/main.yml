@@ -27,3 +27,5 @@ snmp_extension_list:
     extend: 'osupdate {{ snmp_extension_scripts }}/osupdate'
 
 snmp_additional_extensions: []
+
+snmp_extra_lines: []
